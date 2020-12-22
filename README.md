@@ -2,6 +2,10 @@
 
 This project build as part of Walmart test
 
+### `yarn`
+
+Execute this command in order to download all dependencies
+
 ### `yarn dev:server`
 
 Runs the app in the development mode.\
