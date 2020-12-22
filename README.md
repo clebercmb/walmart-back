@@ -1,6 +1,10 @@
-<!-- prettier-ignore -->
-# Walmart test - backend solution
+# Getting Started with Waltmart Back-End solution
 
-**Build**
+This project build as part of Walmart test
 
-- In order to put the back end application up running, execute the following command: yarn dev:server
+### `yarn dev:server`
+
+Runs the app in the development mode.\
+Open [http://localhost:3333](http://localhost:3333) to be listing.
+
+The Walmart Front-End solution must connect to Back-End solution
