@@ -34,7 +34,7 @@ jobs:
         source: ".,!node_modules"
         target: "~/app/walmart/walmart-back"
 
-    # Execute "yarn" in Digital Ocean
+    # Execute "yarn" in Digital Ocean and restart walmart api
     - name: Install dependencies on Digital Ocean
       uses: appleboy/ssh-action@master
       with:
@@ -45,16 +45,8 @@ jobs:
         script: | 
           cd ~/app/walmart/walmart-back 
           yarn
+          pm2 restart walmart-api
       
-      # Restart Node.js server
-    - name: Restarts Walmart api
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        port: ${{ secrets.SSH_PORT }}
-        key: ${{ secrets.SSH_KEY }} 
-        script: pm2 restart walmart-api
 
       
    
