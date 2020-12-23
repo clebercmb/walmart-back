@@ -35,7 +35,7 @@ jobs:
         target: "~/app/walmart/walmart-back"
 
     # Execute "yarn" in Digital Ocean and restart walmart api
-    - name: Install dependencies on Digital Ocean
+    - name: Run Production scripts
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
