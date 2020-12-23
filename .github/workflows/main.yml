@@ -47,7 +47,7 @@ jobs:
           yarn
       
       # Restart Node.js server
-    - name: Install dependencies on Digital Ocean
+    - name: Restarts Walmart api
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
