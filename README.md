@@ -12,3 +12,7 @@ Runs the app in the development mode.\
 The Back-End solution will be up&running on the following address: http://localhost:3334.
 
 The Walmart Front-End solution must connect to Back-End solution
+
+### `yarn build`
+
+Builds the app for production to the `dist` folder.\
