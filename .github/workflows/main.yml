@@ -22,6 +22,8 @@ jobs:
     # Execute a build
     - name: Run build
       run: yarn build   
+      
+    # Copy dist folder to Digital Ocean    
     - name: Copy dist folder to Digital Ocean
       uses: appleboy/scp-action@master
       with:
@@ -29,12 +31,9 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         port: ${{ secrets.SSH_PORT }}
         key: ${{ secrets.SSH_KEY }} 
-        source: "."
+        source: ".,!node_modules"
         target: "~/app/walmart/walmart-back"
 
-
-      # Copy dist folder to Digital Ocean
-      # Overriden the current code on folder "dist" for the new one
       # Execute "yarn" in Digital Ocean
       # Restart Node.js server
    
